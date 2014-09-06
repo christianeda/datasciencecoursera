@@ -72,5 +72,42 @@ names(g)
 
 n <- list(a=1,b=2,c=4)
 
+##############subsetting
 
-dimnames
+o <- matrix(1:6,2,3)
+o
+o1 <- o[1,2]
+class(o1)
+attributes(o1)
+o2 <- o[1,2, drop=FALSE] #preserve dimension by 'drop'
+
+args("rnorm")
+?rnorm
+
+
+x <- c(1, 2, NA, 4, NA, 5)
+bad <- is.na(x)
+x[!bad]
+airquality[1:6, ]
+airquality
+good <- complete.cases(airquality)
+good
+airquality[good,] [1:6,]
+
+
+##hint huge timesaver!!!
+initial <- read.table("datatable.txt", nrows = 100)
+classes <- sapply(initial, class)
+tabAll <- read.table("datatable.txt",
+                     colClasses = classes)
+
+#Set nrows. This doesn’t make R run faster but it helps with memory usage. A mild overestimate
+is okay. You can use the Unix tool wc to calculate the number of lines in a file.
+
+y <- data.frame(a = 1, b = "a")
+dput(y)
+
+?str()
+str(y)
+str(file)
+str(airquality)
