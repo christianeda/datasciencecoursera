@@ -10,6 +10,7 @@ x <-1:20
 class(x)
 attributes(x)
 y <- c("c","f")
+str(y)
 y+x
 z <- c(1.8,"g")
 class(z)
