@@ -111,3 +111,63 @@ dput(y)
 str(y)
 str(file)
 str(airquality)
+
+## This might take time
+con <- url("http://fareda.at", "r")
+x <- readLines(con)
+
+swirl()
+##week 1 quiz
+x <- 4 
+class(x)
+x <- c(4, "a", TRUE)
+class(x)
+x <- list(2, "a", "b", TRUE)
+y <- x[[1]] 
+str(y)
+class(y)
+x <- c(17, 14, 4, 5, 13, 12, 10)
+x1 <-x[x > 10] == 4
+x1
+x2 <- x[x > 10] <- 4
+x[x2]
+x[z]
+
+d1 <- read.csv(file="D:/R/Projects/datasciencecoursera/hw1_data.csv")
+head(d1,2)
+nrow(d1)
+tail(d1,2)
+d1[47,]
+is.na[,1]
+apply(is.na(d1),2,sum)
+yy <- sum(is.na(d1[,1]
+attach(d1)                
+complete <- complete.cases(Ozone)
+subset <-d1$Ozone
+complete
+subset[complete]
+
+mean(subset[complete])
+
+xxx <- subset(d1,Ozone >31 & Temp >90)
+yyy <- subset(d1,Month==6)
+zzz <- subset(d1,Month==5)
+str(d1)
+
+zzz1 <- complete.cases(zzz)
+zzz2 <- zzz[zzz1,]
+
+mean(xxx$Solar.R)
+mean(yyy$Temp)
+
+complete
+
+max(zzz2$Ozone)
+
+v <- c(17, 14, 4, 5, 13, 12, 10)
+v2 <- v[v> 10] == 4
+v3 <- v[v > 10] <- 4
+v3
+
+list.files()
+?median
